@@ -2,10 +2,22 @@
 ## functions do
 
 ## This function creates a special "matrix" object that can cache its inverse.
-##
+## 
+
+seq<-c(rep(1,3),3,4,rep(3,3),4)  ##create dummy matrix
+mat<-matrix(seq,nrow = 3, ncol = 3)
+solve(mat) ##solve for the inverse
 
 makeCacheMatrix <- function(x = matrix()) {
-
+  m<-NULL
+  set<-function(y) {
+    x <<- y
+    m <<- NULL
+  }
+  
+  get<-function() x
+  setmean <- function(mean) m <<-mean
+  getmean <-
 }
 
 
